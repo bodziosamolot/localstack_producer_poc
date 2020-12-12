@@ -10,7 +10,7 @@ AWS.config.update({ region: 'eu-west-2' });
 
 // Create publish parameters
 var params = {
-    Message: 'MESSAGE_TEXT__', /* required */
+    Message: 'MESSAGE_TEXT', /* required */
     TopicArn: 'arn:aws:sns:us-east-1:000000000000:local_sns'
 };
 
