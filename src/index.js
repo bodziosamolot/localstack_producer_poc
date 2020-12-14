@@ -10,7 +10,7 @@ AWS.config.update({ region: 'eu-west-2' });
 
 // Create publish parameters
 var params = {
-    Message: 'MESSAGE_TEXT_this_is_a_test', /* required */
+    Message: 'THIS IS CONTENT OF THE TEST MESSAGE', /* required */
     TopicArn: 'arn:aws:sns:us-east-1:000000000000:local_sns'
 };
 
@@ -24,7 +24,7 @@ app.post('/', (req, res) => {
     // Handle promise's fulfilled/rejected states
     publishTextPromise.then(
         function (data) {
-            console.log(`Message ${params.Message} sent to the topic ${params.TopicArn}`);
+            console.log(`Producer: Message ${params.Message} sent to the topic ${params.TopicArn}`);
             console.log("MessageID is " + data.MessageId);
         }).catch(
             function (err) {
